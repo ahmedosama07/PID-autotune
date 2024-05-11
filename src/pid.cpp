@@ -1,11 +1,7 @@
-#if ARDUINO >= 100
-  #include "Arduino.h"
-#else
-  #include "WProgram.h"
-#endif
+#include "pid.h"
 
-#include <pid.h>
 
+#pragma region constructors
 // Default constructor
 PID::PID() {
     _acc = 0;
@@ -29,7 +25,7 @@ PID::PID(bool isAngular) {
 }
 
 // Constructor with angular flag and PID constants
-PID::PID(bool* isAngular, double kp, double ki, double kd) {
+PID::PID(bool isAngular, double kp, double ki, double kd) {
     _acc = 0;
     _isEnabled = true; // By default, PID controller is enabled
     _isAngular = isAngular;
@@ -37,7 +33,9 @@ PID::PID(bool* isAngular, double kp, double ki, double kd) {
     _ki = ki;
     _kd = kd;
 }
+#pragma endregion constructors
 
+#pragma region setters
 // Set PID constants
 void PID::setConstants(double kp, double ki, double kd) {
     _kp = kp;
@@ -65,6 +63,7 @@ void PID::enable() {
 void PID::disable() {
     _isEnabled = false;
 }
+#pragma endregion setters
 
 // Compute PID output
 double PID::compute(double feedback) {
