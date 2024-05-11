@@ -1,0 +1,12 @@
+# IDE-specific files
+.idea/*
+.vscode/*
+
+# Temporary files
+*.pyc
+*.swp
+*.log
+
+# System-generated files
+Thumbs.db
+DS_Store
