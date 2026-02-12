@@ -1,4 +1,4 @@
-#include "../src/pid-autotune.h"
+#include "pid-autotune.h"
 
 PID pid = PID();
 pid_tuner tuner = pid_tuner(pid);
