@@ -7,15 +7,22 @@
 #######################################
 
 PID KEYWORD1
+pid_tuner	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
-PID KEYWORD2
-control KEYWORD2
-tune KEYWORD2
-tuning KEYWORD2
-autotune KEYWORD2
-autotuning KEYWORD2
-nicoles-ziegler KEYWORD2
+compute	KEYWORD2
+update	KEYWORD2
+start	KEYWORD2
+isDone	KEYWORD2
+setConstants	KEYWORD2
+getKp	KEYWORD2
+getKi	KEYWORD2
+getKd	KEYWORD2
+setTargetValue	KEYWORD2
+setOutputRange	KEYWORD2
+setTuningMode	KEYWORD2
+setHysteresis	KEYWORD2
+setTimeout	KEYWORD2
